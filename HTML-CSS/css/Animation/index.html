@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./animation.css" />
+    <script>
+      function update(e) {
+        var x = e.clientX || e.touches[0].clientX;
+        var y = e.clientY || e.touches[0].clientY;
+
+        document.documentElement.style.setProperty("--cursorX", x + "px");
+        document.documentElement.style.setProperty("--cursorY", y + "px");
+      }
+
+      document.addEventListener("mousemove", update);
+      document.addEventListener("touchmove", update);
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <div class="line"></div>
+    </div>
+
+    <div class="fade"></div>
+    <div class="container">
+      <div class="one">ease</div>
+      <div class="two">linear</div>
+      <div class="three">ease-i-out</div>
+    </div>
+
+    <div>Mouse Effect</div>
+
+    <!-- <div class="text-div" id="mouseeffect">
+      Hello this is mouse Effect. Hello this is mouse Effect Hello this is mouse
+      Effect. Hello this is mouse Effect. Hello this is mouse Effect. Hello this
+      is mouse Effect. Hello this is mouse Effect. Hello this is mouse Effect
+      Hello this is mouse Effect. Hello this is mouse Effect. Hello this is
+      mouse Effect. Hello this is mouse Effect. Hello this is mouse Effect.
+      Hello this is mouse Effect Hello this is mouse Effect. Hello this is mouse
+      Effect. Hello this is mouse Effect. Hello this is mouse Effect. Hello this
+      is mouse Effect. Hello this is mouse Effect Hello this is mouse Effect.
+      Hello this is mouse Effect. Hello this is mouse Effect. Hello this is
+      mouse Effect. Hello this is mouse Effect. Hello this is mouse Effect Hello
+      this is mouse Effect. Hello this is mouse Effect. Hello this is mouse
+      Effect. Hello this is mouse Effect. Hello this is mouse Effect. Hello this
+      is mouse Effect Hello this is mouse Effect. Hello this is mouse Effect.
+      Hello this is mouse Effect. Hello this is mouse Effect. Hello this is
+      mouse Effect. Hello this is mouse Effect Hello this is mouse Effect. Hello
+      this is mouse Effect. Hello this is mouse Effect. Hello this is mouse
+      Effect
+    </div> -->
+
+    <div class="container2">
+      <img src="3d2.jpg" />
+      <img src="3d2.jpg" />
+      <img src="3d2.jpg" />
+      <img src="3d2.jpg" />
+    </div>
+  </body>
+</html>

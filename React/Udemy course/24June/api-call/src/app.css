@@ -1,0 +1,18 @@
+* {
+	padding: 5px;
+	margin:10px;
+	font-size: 110%;
+	background-color: gainsboro;
+	font-weight: bold;
+}
+
+input{
+	background-color: aqua;
+}
+
+button{
+	background-color: hotpink;
+}
+input:focus{
+	background-color: rgb(143, 235, 235);
+}

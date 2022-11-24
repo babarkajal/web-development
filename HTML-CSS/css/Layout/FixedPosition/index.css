@@ -1,0 +1,16 @@
+body {
+	font-size: 1rem;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.para-1, .para-2 {
+	margin-bottom: 20px;
+}
+
+.para-1 {
+	float: left;
+	width: 300px;
+	padding: 20px;
+	border: red 1px solid;
+	background: lightcyan;
+	margin-right: 10px;
+}

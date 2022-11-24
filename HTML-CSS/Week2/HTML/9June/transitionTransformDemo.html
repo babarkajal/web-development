@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+        <head>
+                <meta charset="utf-8">
+                <title>Transition Transform Demo</title>
+                <style media="screen">
+                        .hello-div {
+                                background-color: darkviolet;
+                                color: white;
+                                border: 1px solid black;
+                                width: 100px;
+                                height:100px;
+                                padding: 50px;
+                                text-align: center;
+                                transition: width 2s, height 2s, transform 2s;
+                                margin:auto;
+                                margin-top:50px;
+                        }
+                        .hello-div:hover {
+                                width: 300px;
+                                height:300px;
+                                transform:rotate(360deg);
+                        }
+                </style>
+        </head>
+        <body>
+                <h2>Hover the mouse on html element</h2>
+                <div class="hello-div"> Rotate me
+                </div>
+        </body>
+</html>

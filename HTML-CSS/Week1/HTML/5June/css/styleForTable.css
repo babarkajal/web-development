@@ -1,0 +1,28 @@
+body {
+        font-style: arial, verdana, sans-serif;
+
+}
+
+th , td {
+        padding: 5px;
+        text-align: center;
+        border: 1px solid #dddddd;
+}
+th {
+        background:lightblue;
+}
+table.first {
+        border: 1px solid #dddddd;
+        background-color: #dddddd;
+        empty-cells: hide;
+        border-spacing: 10px;
+        border-collapse: separate;
+        margin-bottom: 10px;
+}
+table.second {
+        empty-cells: show;
+        border-collapse: collapse;
+}
+.even {
+        background-color: white;
+}

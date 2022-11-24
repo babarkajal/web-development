@@ -1,0 +1,23 @@
+.container {
+	display: flex;
+	justify-content: center;
+}
+img {
+	height: 600px;
+	width: 500px;
+	object-fit: contain
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("warali.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%; 
+	/* background: url('warali.png') no-repeat 40px 30px ; */
+
+	/* we can add multiple image  */
+	/* background: url("warali.png") top left no-repeat, url("tile.webp") bottom right no-repeat; */
+}

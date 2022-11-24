@@ -1,0 +1,13 @@
+<ol class="list-group">
+	<li class="list-group-item">
+	   <div *ngIf = "element.name" class="panel">
+		<div class="panel-heading" #heading>
+			{{element.name }}
+		</div>	
+		<div class="panel-body">
+			{{element.content}}
+		</div>
+
+	   </div>
+   </li>
+</ol>

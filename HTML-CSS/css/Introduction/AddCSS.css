@@ -1,0 +1,24 @@
+/* UNIVERSAL SELECTOR */
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CLASS SELECTOR */
+.info-field {
+	font-size: 1.4rem;
+}
+
+.field-label {
+	color: blue;
+	font-weight: 700;
+	font-size: 200%;
+}
+
+/* ID SELECTOR */
+#profession {
+	color: brown;
+	background: lightgreen;
+}
+*  {
+	background-color: lightcyan;
+}

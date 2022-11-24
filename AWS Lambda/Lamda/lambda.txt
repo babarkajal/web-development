@@ -1,0 +1,4 @@
+
+
+Steps for lamda setup:
+Create lambda function

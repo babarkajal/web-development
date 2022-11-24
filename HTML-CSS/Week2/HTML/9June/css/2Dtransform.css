@@ -1,0 +1,29 @@
+p {
+        width: 7%;
+        padding: 5px;
+        border: 1px solid #000000;
+        background-color: lightblue;
+        margin:10px;
+}
+p#first:hover {
+        transform: translate(50px, 50px);
+}
+
+p#second:hover {
+
+        transform: rotate(90deg);
+}
+#third:hover {
+        transform: scale(2,2);
+        background: yellow;
+        margin-left: 50px;
+}
+#four:hover {
+  transform: skew(20deg, 10deg);
+
+}
+
+#five:hover {
+  -ms-transform: matrix(1, -0.3, 0, 1, 10, 10); /* IE 9 */
+  transform: matrix(1, -0.3, 0, 1, 10, 10); /* Standard syntax */
+}

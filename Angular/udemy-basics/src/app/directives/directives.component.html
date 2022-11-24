@@ -1,0 +1,51 @@
+<div class="container">
+	<hr>
+	<h1 class="text-center">Directives </h1>
+	<ol class="list-group"> 
+		<li class="list-group-item">
+			<div class="h2">Built-in Directives</div>
+			<ul  class="list-group">
+				<li class="list-group-item">
+					<h3>ngIf Directive: Structure directive</h3>
+					<p *ngIf = "showNgIf; else elsePart" class="h4"> Show this div if condition is true</p>
+					<ng-template #elsePart class="h4">Else part executed</ng-template>
+				</li>
+				<li class="list-group-item">
+					<h3>ngFor Directive: Structure directive</h3>
+					<h3>Iterate over the list and shows the each item </h3>
+					<div class="container">
+						<p class="h4" *ngFor='let ele of namesArray; let i=index'>
+							{{i+1}} - {{ele}}
+						</p>
+					</div>
+					
+				</li>
+				<li class="list-group-item">
+					<h3>ngSwitch Directive: Structure directive</h3>
+					<h3>Displays element based on switch condition </h3>
+					<div class="container">
+						<div [ngSwitch]="switchCondition">
+							<p *ngSwitchCase="'pear'">
+								<img [src]="pearImage" alt="">
+							</p>
+							<p *ngSwitchCase="'apple'">
+								<img [src]="appleImage" alt="">
+							</p>
+							<p *ngSwitchCase="'pineaple'">
+								<img [src]="pineapple" alt="">
+							</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</li>
+
+		<li class="list-group-item">
+			<div class="h2">Attribute Directives</div>
+			<div appHighlightText class="h4">Highlight this text using attribute directive</div>
+			<div class="h4" appHighlightText> Highlight this text on hover only </div>
+		</li>
+
+	</ol>
+
+</div>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+        <head>
+                <meta charset="utf-8">
+                <title>Switch Demo</title>
+        </head>
+        <body>
+                <h1>take one digit from para tag and prints it in word</h1>
+                <p id='value'>4</p>
+                <p id='digit'>value is digit = </p>
+                <script type="text/javascript">
+                        var val = document.getElementById('value').innerHTML;
+                        var digit;
+                        switch(val) {
+                                case '1':
+                                        digit = 'one';
+                                        break;
+                                case '2':
+                                        digit = 'two';
+                                        break;
+                                case '3':
+                                        digit = 'three';
+                                        break;
+                                case '4':
+                                        digit = 'four';
+                                        break;
+                                case '5':
+                                        digit = 'five';
+                                        break;
+                                case '6':
+                                        digit = 'six';
+                                        break;
+                                case '7':
+                                        digit = 'seven';
+                                        break;
+                                case '8':
+                                        digit = 'eight';
+                                        break;
+                                case '9':
+                                        digit = 'nine';
+                                        break;
+                                case '0':
+                                        digit = 'zero';
+                                        break;
+                        }
+                        document.getElementById('digit').innerHTML = digit;
+                </script>
+
+        </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+        <head>
+                <meta charset="utf-8">
+                <title>Animation Demo</title>
+                <style media="screen">
+                        div.animation-demo {
+
+                                width: 100px;
+                                height:100px;
+                                animation-name: example;
+                                animation-duration: 10s;
+                                background-color: darkblue;
+                                margin:5px;
+                        }
+                        @keyframes example {
+                                from{background-color: red;}
+                                to {background-color: darkblue;}
+                        }
+                        div#animation {
+                                width: 100px;
+                                height:100px;
+                                animation-name: example2;
+                                animation-duration: 10s;
+                                background-color: darkblue;
+                                margin:5px;
+                        }
+
+                        @keyframes example2 {
+                                  0%   {background-color: red;}
+                                  25%  {background-color: yellow;}
+                                  50%  {background-color: blue;}
+                                  100% {background-color: green;}
+                        }
+                </style>
+
+        </head>
+        <body>
+                <h1>This is animation</h1>
+                <div class="animation-demo">
+
+                </div>
+                <div id="animation">
+
+                </div>
+        </body>
+</html>

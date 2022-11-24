@@ -1,0 +1,33 @@
+<div class="container">
+	<h1 class="text-center">Directives</h1>
+
+	<!-- NGIF DIRECTIVES -->
+	<h2 class="text-bold">Hidden Leaf Village</h2>
+	<div class="btn btn-primary" (click)="showElement()" >Show Naruto</div>
+
+<!-- 	This ngIf converts to 
+	<ng-template [ngIf] ='showElementFlag'></ng-template>  -->
+	<!-- <p *ngIf="showElementFlag" class="container">  
+		<img src="../assets/naruto.jpeg" alt="This is Naruto">
+		<figcaption appHighlightNamesBetter defaultColor="lightblue" [highlightColor]='"orange"'  > I am Naruto Uzimaki. I will be next Hokage. 
+		</figcaption>
+	</p> -->
+
+	<!-- CUSTOM DIRECTIVE -->
+	<p *appUnless="!showElementFlag" class="container">  
+		<img src="../assets/naruto.jpeg" alt="This is Naruto">
+		<figcaption appHighlightNamesBetter defaultColor="lightblue" [highlightColor]='"orange"'  > I am Naruto Uzimaki. I will be next Hokage. 
+		</figcaption>
+	</p>
+
+	<!-- --------------------------- ngFor directive --------------------------- -->
+	<div class="h2">Ninja from leaf village</div>
+	<div class="container">
+		<div class="list-group" >
+			<!-- custom directive  -->
+			<div class="list-group-item" *ngFor='let i of ninjaNames' appHighlightNames>
+				{{i}}
+			</div>
+		</div>
+	</div>
+</div>

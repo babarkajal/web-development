@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+        <head>
+                <meta charset="utf-8">
+                <title>Date demo</title>
+        </head>
+        <body>
+                <script type="text/javascript">
+                        //ways to create date object
+                        var date = new Date();
+                        console.log(date);
+                        date = new Date(2018, 11, 24, 10, 33, 30, 0);
+                        console.log(date);
+                        date = new Date(2020, 12, 24, 23);
+                        console.log(date);
+                        date= new Date(2018);
+                        console.log(date);
+
+                        console.log('toDateString(): ', date.toString());
+                        console.log('toDateString(): ', date.toDateString());
+                        console.log('toUTCString(): ', date.toUTCString());
+                        console.log('toDateString(): ', date.toISOString());
+
+                        //get functions
+                        date = new Date();
+                        console.log(date.getTime());
+                        console.log(date.getFullYear());
+                        console.log(date.getDay());
+                        console.log(date.getMinutes());
+                        console.log(date.getHours());
+                        console.log(date.getSeconds());
+                        
+                </script>
+
+        </body>
+</html>

@@ -1,0 +1,21 @@
+.Time {
+	position: absolute;
+	right: 50px;
+	top: 100px;
+	font-size:200%;
+	font-weight: bold;	
+	border: 1px solid white;
+	padding: 20px;
+}
+
+body {
+	background-color: black;
+	color: white;
+}
+
+h1 {
+	font-size: 500%;
+	position: absolute;
+	top:40%;
+	margin: 0;
+}

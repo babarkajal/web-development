@@ -1,0 +1,117 @@
+.product-display {
+  /* border: 1px solid black; */
+  width: 100%;
+  margin: auto;
+  margin-top: 100px;
+}
+.info p {
+  margin: 0px;
+}
+.product-display .product-title {
+  /* border: 1px solid black; */
+  text-align: center;
+  font-size: 2.5rem;
+  color: #5e3005;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.product-display .container {
+  /* border: 3px solid green; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: auto;
+  justify-content: space-around;
+}
+
+.product-display .right-container {
+  /* border: 1px solid black; */
+  width: 600px;
+  margin-right: 0px;
+}
+
+.product-display img {
+  border: 1px solid black;
+}
+.product-name {
+  font-size: 1.9rem;
+  text-transform: capitalize;
+  font-family: Oswald, sans-serif !important;
+  color: #232528;
+}
+
+.company-name {
+  font-family: Crimson Text, serif;
+  letter-spacing: 0.3rem;
+  color: #fff;
+  text-transform: uppercase !important;
+  font-size: 1.8rem;
+}
+
+.product-display .price {
+  font-weight: bolder;
+  font-style: normal;
+  color: #5e3005;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  font-family: Oswald, sans-serif;
+  margin-bottom: 10px;
+}
+
+.info .title {
+  color: #232528;
+  font-family: Oswald, sans-serif !important;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  /* border: 1px solid black; */
+}
+.info .para {
+  color: #343a40;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  font-family: Oswald, sans-serif;
+  /* border: 1px solid black; */
+  margin-bottom: 20px;
+}
+
+.products-button {
+  color: #5e3005;
+  border: 1px solid #5e3005;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  margin: 8px 8px 0px 1px;
+  border-radius: 6px;
+  padding: 5px;
+  transition: 0.5s;
+}
+.products-button:hover {
+  background: #5e3005;
+  color: white;
+}
+.cart-button {
+  color: #232528;
+  border: 1px solid #5e3005;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  border-radius: 6px;
+  padding: 5px;
+  transition: 0.5s;
+  background: #ca8951;
+}
+
+.cart-button:hover {
+  background: #ffc107;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .product-display .right-container {
+    /* border: 1px solid black; */
+    width: 300px;
+    margin-right: 0px;
+  }
+}
+

@@ -1,0 +1,157 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+  justify-content: center;
+}
+.one {
+  width: 150px;
+  height: 150px;
+  /* Change COlor */
+  animation: changePosition 4s, changeColor 4s;
+  position: relative;
+  animation-iteration-count: infinite;
+}
+.two {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  /* Change COlor */
+  animation: changePosition 4s, changeColor 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.three {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  /* Change COlor */
+  animation: changePosition 4s, changeColor 4s;
+  /* animation-iteration-count: infinite; */
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes changeColor {
+  from {
+    background-color: yellow;
+  }
+  to {
+    background-color: green;
+  }
+}
+
+@keyframes changePosition {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 50vh;
+  }
+}
+
+.line {
+  /* width: 100%; */
+  width: 20%;
+  margin-top: 40px;
+  height: 20px;
+  background-color: green;
+  animation: lineAnimate 3s linear alternate infinite;
+  /* border-radius: 0 8px 8px 0; */
+}
+
+@keyframes lineAnimate {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.fade {
+  background-image: url("3d2.jpg");
+  background-attachment: fixed;
+  height: 500px;
+  width: 500px;
+  animation: fade;
+  animation: fade-in 2s linear;
+  border: 3px solid red;
+  transition: border 0.3s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.text-div {
+  color: blue;
+}
+
+/* Flashlight Overlay */
+/* :root {
+  cursor: none;
+  --cursorX: 50vw;
+  --cursorY: 50vh;
+}
+:root:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 10vmax at var(--cursorX) var(--cursorY),
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 80%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+} */
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+.container2 {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  margin-top: 150px;
+  background: rgba(0, 0, 0, 0);
+  /* transform: rotate(-30deg) skew(25deg) scale(0.8); */
+  transition: 0.5s;
+}
+
+.container2 img {
+  position: absolute;
+  width: 100%;
+  /* background: transparent; */
+  transition: 0.5s;
+}
+
+.container2:hover :nth-child(1) {
+  transform: translate(160px, -160px);
+  opacity: 1;
+}
+.container2:hover :nth-child(2) {
+  transform: translate(140px, -140px);
+  opacity: 0.8;
+}
+.container2:hover :nth-child(3) {
+  transform: translate(120px, -120px);
+  opacity: 0.5;
+}
+.container2:hover :nth-child(4) {
+  transform: translate(100px, -100px);
+  opacity: 0.3;
+}

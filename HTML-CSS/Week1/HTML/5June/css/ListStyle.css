@@ -1,0 +1,7 @@
+ol {
+        list-style-type: lower-alpha;
+}
+
+ul {
+        list-style: inside circle;
+}

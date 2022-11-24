@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+        <head>
+                <meta charset="utf-8">
+                <title>Calculator</title>
+                <link rel="stylesheet" href="css/calculator.css">
+        </head>
+        <body>
+                <!-- Add heading to the page -->
+                <h1>
+                        Simple Calculator
+                </h1>
+
+                <form class="" action="index.html" method="post">
+                <table>
+                        <!-- first row -->
+                        <tr>
+                                <td colspan=3><input type="text" id='input-id' value=''></td>
+                                <!-- <td>
+                                <input type="image" id='return' src= "image/return.jpg" value="" onclick="return backspace(); return false;">
+                                </td> -->
+                                <td><input type="button" onclick="backspace()" id='return' value='X'></td>
+                        </tr>
+
+                        <!-- second row -->
+                        <tr>
+                                <td><input type="button" onclick="addToInput1()" id='one' value='1'></td>
+                                <td><input type="button" onclick="addToInput2()" id='two' value='2'></td>
+                                <td><input type="button" onclick="addToInput3()" id='three' value='3'></td>
+                                <td><input type="button" onclick="clearText()" id='cancel' value='C'></td>
+                        </tr>
+
+                        <!-- third row -->
+                        <tr>
+                                <td><input type="button" onclick="addToInput4()" id='four' value='4'></td>
+                                <td><input type="button" onclick="addToInput5()" id='five' value='5'></td>
+                                <td><input type="button" onclick="addToInput6()" id='six' value='6'></td>
+                                <td><input type="button" onclick="addToInputMin()" id='min' value='-'></td>
+                        </tr>
+
+                        <!-- fourth row -->
+                        <tr>
+                                <td><input type="button" onclick="addToInput7()" id='seven' value='7'></td>
+                                <td><input type="button" onclick="addToInput8()" id='eight' value='8'></td>
+                                <td><input type="button" onclick="addToInput9()" id='nine' value='9'></td>
+                                <td><input type="button" onclick="addToInputPlus()" id='plus' value='+'></td>
+                        </tr>
+
+                        <!-- fifth row -->
+                        <tr>
+                                <td><input type="button" onclick="addToInputDiv()" id='div' value='/'></td>
+                                <td><input type="button" onclick="addToInput0()" id='zero' value='0'></td>
+                                <td><input type="button" onclick="addToInputMul()" id='mul' value='*'></td>
+                                <td><input type="button" onclick="calculate()" id='equal' value='='></td>
+                        </tr>
+                </table>
+                </form>
+                <script type="text/javascript" src="js/calculator.js">
+                </script>
+        </body>
+</html>

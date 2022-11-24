@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="container">
+		<app-cockpit (serverCreateAlias)="onAddServer($event)"></app-cockpit>
+	</div>
+	
+	<div class="container">
+		<app-server-element *ngFor="let i of serverArray" [serverElement]="i" [name]="serverArray[0].name"></app-server-element>
+	</div>
+
+	<div class="btn btn-primary" (click)="changeServerName()" >Change Content</div>
+	<div class="btn btn-danger" (click)="onDestroyElement()" >Destroy Element</div>
+</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+        <head>
+                <meta charset="utf-8">
+                <title>Conditional Statement</title>
+
+        </head>
+        <body>
+                <div>I am
+                        <span id='temp'> hello</span>
+                </div>
+                <script type="text/javascript">
+                        var age = 20;
+                        var stage;
+                        if(age <= 10) {
+                                stage= 'child';
+                        }
+                        else if(age >10 && age<20) {
+                                stage='teenage';
+                        }
+                        else if(age>=20 &&age<=60) {
+                                stage='adult';
+                        }
+                        else {
+                                stage ='old';
+                        }
+                        document.getElementById('temp').innerHTML = stage;
+                </script>
+        </body>
+</html>

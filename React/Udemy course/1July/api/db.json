@@ -1,0 +1,50 @@
+{
+  "streams": [
+    {
+      "title": "d",
+      "description": "f",
+      "id": 1
+    },
+    {
+      "title": "d",
+      "description": "f",
+      "id": 2
+    },
+    {
+      "title": "I created this",
+      "description": "made by me",
+      "userId": "113333966138156243850",
+      "id": 3
+    },
+    {
+      "title": "red",
+      "description": "erf",
+      "userId": "113333966138156243850",
+      "id": 4
+    },
+    {
+      "title": "dfd",
+      "description": "ffd",
+      "userId": "113333966138156243850",
+      "id": 5
+    },
+    {
+      "title": "aeee",
+      "description": "dfdf",
+      "userId": "113333966138156243850",
+      "id": 6
+    },
+    {
+      "title": "dsddf",
+      "description": "erer",
+      "userId": "113333966138156243850",
+      "id": 7
+    },
+    {
+      "title": "me",
+      "description": "me",
+      "userId": "104149076952344025735",
+      "id": 8
+    }
+  ]
+}

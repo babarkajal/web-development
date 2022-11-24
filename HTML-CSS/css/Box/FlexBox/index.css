@@ -1,0 +1,21 @@
+.container {
+	width: 80%;
+	height: 600px;
+	background-color: lightseagreen;
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+.item {
+	width: 200px;
+	height: 200px;
+	margin: 10px;
+	background-color: lightpink;
+}
+/* .item-1 {
+	width: 200px;
+	height: 100px;
+} */

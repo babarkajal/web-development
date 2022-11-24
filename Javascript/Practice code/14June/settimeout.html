@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+        <head>
+                <meta charset="utf-8">
+                <title>setTimeout demo</title>
+                <style media="screen">
+                        p {
+                                color: darkblue;
+                                background: yellow;
+                                border: 1px solid black;
+                                padding: 10px;
+                                text-align: center;
+
+                        }
+                        div {
+                                color: darkblue;
+                                background: yellow;
+                                border: 1px solid black;
+                                padding: 10px;
+                                text-align: center;
+
+                        }
+                </style>
+        </head>
+        <body>
+                <p id='para'>This is paragraph</p>
+
+                <div class="container"> This is div</div>
+                <script type="text/javascript">
+
+                        temp = ()=> {
+                                document.getElementById('para').innerHTML ="<b>content is changed after set interval</b>";
+                        }
+                        setTimeout(temp,5000);
+                        temp_in = ()=> {
+                                var ele = document.querySelector(".container");
+                                ele.style.background='red';
+                                console.log('setInterval executed');
+                        }
+                        temp_in2 = ()=> {
+                                var ele = document.querySelector(".container");
+                                ele.style.background ='green';
+                        }
+                        setInterval(temp_in,2000);
+                        var clr = setInterval(temp_in2, 3000);
+
+                </script>
+
+        </body>
+</html>

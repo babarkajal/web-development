@@ -1,0 +1,31 @@
+
+div {
+	font-size: 2rem;
+}
+.div1 {
+	width: 200px;
+	height: 200px;
+	background-color: yellow;
+	margin: 20px;
+}
+
+.div2 {
+	width: 200px;
+	height: 200px;
+	background-color: green;
+	margin: 20px;
+	padding: 20px;
+}
+
+.div3 {
+	width: 200px;
+	height: 200px;
+	background-color: lightblue;
+	margin: 20px;
+	padding: 20px;
+	border:green dashed 2px ;
+}
+
+.hidden {
+	visibility: hidden;
+}

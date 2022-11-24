@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+        <head>
+                <meta charset="utf-8">
+                <title>For loop Demo</title>
+        </head>
+        <body>
+                <script type="text/javascript">
+                        var a = new Array('apple','pineapple','mango','grapes','guava');
+                        //for loop
+                        console.log('Using for loop----------------');
+                        for(var i=0 ;i<a.length; i++)
+                                console.log(a[i]);
+
+                        //for each loop
+                        console.log('Using foreach ----------------');
+                        a.forEach(function(element) {
+                                console.log(element);
+                        });
+
+                        //Using while loop
+                        console.log('Using while loop--------------');
+                        let j = 0;
+                        while(j<a.length) {
+                                console.log(a[j]);
+                                j ++;
+                        }
+
+                        console.log('Using do-while----------------');
+                        j=0;
+                        do {
+                                console.log(a[j]);
+                                j++;
+                        }while(j<a.length);
+                </script>
+
+        </body>
+</html>

@@ -1,0 +1,8 @@
+h2,h3,H4{
+        background-color: rgb(153, 153, 255);
+        font-size: 120%;
+        text-align: center;
+}
+P{
+        background-color: rgba(255, 0, 0, 0.2);
+}

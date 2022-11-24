@@ -1,0 +1,93 @@
+/* style for header */
+
+/* style for heading */
+h1 {
+        width: 66%;
+        margin: 5px;
+        padding:10px;
+        border: 4px solid black;
+        text-align: center;
+        color: green;
+}
+
+/* style for table */
+table {
+        border: 1px solid black;
+        width: 50%;
+        height: 500px;
+        border-collapse: collapse;
+        background-color: lightgray;
+}
+
+/* style for input type button */
+input[type=button] {
+        padding: 30px;
+        width: 300px;
+        border-radius:0px;
+        border:2px solid;
+        border-bottom: 3px solid;
+        border-right: 3px solid;
+        margin: 2px;
+        font-size: 50px;
+        background-color: #cccccc;
+}
+
+/* style for input type button  when we hover it */
+input[type=button]:hover{
+        color: black;
+        background: #8c8c8c;
+}
+
+/* style for input type text */
+input[type=text] {
+        padding: 20px;
+        width: 870px;
+        height: 70px;
+        border-bottom: 3px solid;
+        border-right: 3px solid;
+        margin: 2px;
+        font-size: 50px;
+        background-color: #ccffff;
+}
+
+/* style for input text when we focus it */
+input[type=text]:focus {
+        background-color: #99ffff;
+}
+
+
+/* style for backspace button */
+input#return {
+        border:2px solid;
+        border-bottom: 3px solid;
+        border-right: 3px solid;
+        margin: 2px;
+        width: 300px;
+        height: 110px;
+        background-color: #e60000;
+}
+/* when we hover backspace button */
+#return:hover { background-color: #990000}
+
+/* style for equal button */
+#equal {background-color: #009900;}
+
+/* style when we hover equal button */
+#equal:hover { background-color: #004d00;}
+
+/* style for cacel button */
+#cancel {background-color: #ff6666;}
+
+/* style for cancel button when we hover it */
+#cancel:hover {background: #ff1a1a;}
+
+/* style for operators */
+#plus, #min, #div, #mul {
+        background-color: #ffb3ff;
+}
+
+/* style for operators when we hover it */
+#plus:hover, #min:hover, #div:hover, #mul:hover {
+        color: black;
+        background-color: #ff4dff;
+}

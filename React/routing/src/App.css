@@ -1,0 +1,17 @@
+body {
+        background-color: lightcyan;
+        font-size: 1.3rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn {
+        margin:10px ;
+}
+
+.complete {
+        color: green;
+}
+
+.not-complete {
+        color: red
+}

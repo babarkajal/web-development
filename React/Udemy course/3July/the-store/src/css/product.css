@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+/* outside flex container */
+body {
+	background-color: #ca8951;	
+}
+.product-flex-container {
+	/* border: 4px solid #ac0f0f; */
+	display: flex;
+	flex-wrap:wrap;
+	width: 75vw;
+	margin:auto;
+
+}
+
+/* inside flex container */
+.item {
+	display: flex;
+	flex-direction: column;
+	background-image: linear-gradient(white, rgb(233, 167, 93));
+	margin: 15px;
+	width: 250px;
+	height: 300px;
+	justify-content: space-between;
+	border-radius: 3px;
+	border-bottom: 1px solid white;
+	word-wrap: break-word;
+	box-sizing: border-box;
+	
+}
+
+.item img {
+	width: 150px;
+	height: 150px;
+	display: block;
+	margin: auto;
+}
+
+.image-flex-item {
+	/* border: 1px solid red; */
+	flex-basis: 250px;
+	padding-top: 50px;
+}
+
+.inner-flex-container {
+	flex-direction: row;
+	display: flex;
+	/* border: 1px solid green; */
+	justify-content: space-between;
+	padding: 10px 20px;
+	
+}
+.item:hover> .inner-flex-container{
+	background-color:white;
+	transition:all 0.6s;
+	transition-timing-function: ease-in-out;
+}
+
+.item:hover{
+	border: 0.1rem solid black;
+	box-shadow: 0.05rem 0.05rem rgb(61, 55, 55);
+	transition:all 0.6s;
+	transition-timing-function: ease-in-out;
+}
+
+.item:hover > .image-flex-item {
+	transform: scale(1.2);
+	transition: all 1s;
+	transition-timing-function: ease-in-out;
+}
+
+.main-container {
+	max-width: 1140px;
+	width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+div.heading{
+	font-family: Crimson Text,serif;
+	letter-spacing: 3px;
+	text-align: center;
+}
+
+
+h2.no-bold {
+	color: black;
+	font-weight: normal;
+	font-size: 2.5rem;
+}
+
+.product-heading {
+	color: #5e3005;
+	font-size: 2.5rem;
+
+}
+
+.price {
+	font-style: italic;
+	font-size:1.25rem;
+	color: #5e3005;
+
+}
+.flex-floating-button{
+	position: relative;
+	/* display: none;  */
+	top: -80px;
+	left: 100px;
+	float: right;
+}
+
+.item:hover+.flex-floating-button{
+	background-color: black;
+	display: inline-flex;
+}

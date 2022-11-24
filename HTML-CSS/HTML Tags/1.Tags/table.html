@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table</title>
+	<link rel="stylesheet" href="table.css">
+</head>
+<body>
+	<h2>Student Table</h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Student Name</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <td>100</td>
+        <td>Sakshi Patil</td>
+        <td>Kolhapur</td>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>Kajal Babar</td>
+        <td>Satara</td>
+      </tr>
+      <tr>
+        <td>102</td>
+        <td>Dhanashree Bobade</td>
+        <td>Pune</td>
+      </tr>
+    </table>
+
+    <h2>Time table: Without spanning</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>8AM</th>
+          <th>9AM</th>
+          <th>10AM</th>
+          <th>11AM</th>
+        </tr>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>C</td>
+            <td>C++</td>
+            <td>Java</td>
+            <td>Java</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C++</td>
+            <td>Java</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+			<td>C</td>
+            <td>Python</td>
+            <td>C</td>
+            <td>Python</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>Python</td>
+            <td>Python</td>
+            <td>Python</td>
+            <td>Python</td>
+          </tr>
+        </tbody>
+      </thead>
+    </table>
+
+    <h2>Time table: With spanning</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>8AM</th>
+          <th>9AM</th>
+          <th>10AM</th>
+          <th>11AM</th>
+        </tr>
+      </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td rowspan="3">C</td>
+            <td>C++</td>
+            <td colspan="2">Java</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>C</td>
+            <td>C++</td>
+            <td>Java</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>Python</td>
+            <td>C</td>
+            <td>Python</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td colspan="4">Python</td>
+          </tr>
+        </tbody>
+    </table>
+</body>
+</html>

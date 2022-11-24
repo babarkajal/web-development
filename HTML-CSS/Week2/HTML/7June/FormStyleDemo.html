@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Form Style Demo</title>
+                <link rel="stylesheet" href="css/styleform.css">
+        </head>
+        <body>
+                <h2>Personal Information</h2>
+                <form action="index.html" method="get">
+                        Your name:
+                                <input type="text" name="name" required><br/>
+                        <br/>
+                        School name:
+                                <input type="text" name="schoolname"><br/>
+                        <br/>
+                        Gender: <br/>
+                                <input type="radio" name="male">male
+                                <input type="radio" name="female">female
+                                <input type="radio" name="other">other
+                        <br/>
+                        <br/>
+                        Date of birth:
+                                <input type="date"><br/>
+                        <br/>
+                        Favourite Food:
+                                <input type="checkbox" name="southindian">South indian
+                                <input type="checkbox" name="Maharastrian" >Maharastrian
+                                <input type="checkbox" name="snaks">snaks
+                        <br/>
+                        <br/>
+                        Country:
+                        <select >
+                                <option>USA</option>
+                                <option>UK</option>
+                                <option>India</option>
+                                <option>Japan</option>
+                        </select><br/>
+                        <br/>
+                        <h2>fieldset</h2>
+                        <fieldset>
+                                <legend>Contact details</legend>
+                                <label>Email:<br />
+                                        <input type="text" name="email" /></label><br />
+                                <label>Mobile:<br />
+                                        <input type="text" name="mobile" /></label><br />
+                                <label>Telephone:<br />
+                                        <input type="text" name="telephone" /></label>
+                        </fieldset>
+                         <input type="submit" value="Submit"/>
+                </form>
+        </body>
+</html>

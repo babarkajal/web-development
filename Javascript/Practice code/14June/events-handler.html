@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+        <head>
+                <meta charset="utf-8">
+                <title>Events Handles in JS</title>
+                <style media="screen">
+                * {
+                        padding: 5px;
+                        margin: 10px;
+                }
+                </style>
+        </head>
+        <body>
+                <h2>We can call execute js code using Event attributes in HTML</h2>
+
+                <!-- when we click on this heading this will change its content -->
+                <h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
+                Click on this heading to see the effect <br/>
+
+                <button onclick="addPara()">Click on me to add the paragraph</button><br/>
+
+                <button type="button" id="button">change the content</button><br/>
+
+                <p>change the content of the input:
+                        Add the text inside box<br/>
+                        <input type="text" id = 'box' onchange="changeInput()"><br/><p>
+
+                <p>onmouseover events
+                <button type="button" id='button2' onmouseover='changeButton()'>I am button</button>
+                </p>
+                <script type="text/javascript" src ="js/event-handler.js"></script>
+
+                
+        </body>
+</html>
