@@ -58,6 +58,8 @@ function Timer() {
   }
   return (
     <div className="container">
+      <p>Hook is React</p>
+      <p>Timer using Hooks</p>
       <p className="timer">
         {hrs >= 10 ? hrs : "0" + hrs}: {min >= 10 ? min : "0" + min} :
         {sec >= 10 ? sec : "0" + sec}

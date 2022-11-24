@@ -19,20 +19,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-top: 20px;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+  background-color: transparent !important;
+}
+
+.navbar-brand {
+  cursor: pointer;
+  color: rgb(169, 165, 165) !important;
+}
+.active .navbar-brand {
+  cursor: pointer;
+  color: white !important;
+}
+
+button,
+.btn {
+  margin: 10px;
+}
+
+input {
+  background-color: transparent !important;
+  color: white !important;
+  margin: 10px !important;
+}
+
+.usememo-content {
+  display: flex;
+  align-items: center;
 }
