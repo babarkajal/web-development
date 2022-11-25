@@ -9,10 +9,10 @@ function UseCallbackDemo(props) {
   const [number, setNumber] = useState(0);
   const [buttonColor, setButtonColor] = useState(0);
 
-  const double = useCallback(() => calculateExpensiveResults(number), [number]);
-
   const theme = useMemo(() => {
-    return buttonColor === 0 ? { color: "#000" } : { color: "#0f0" };
+    return buttonColor === 0
+      ? { color: "#000" }
+      : { color: "rgb(123 102 255)" };
   }, [buttonColor]);
 
   //*Using Callback: it recreate function only when the number changes
@@ -50,7 +50,7 @@ function UseCallbackDemo(props) {
             >
               Change color
             </button>
-            <div className="">Doubled number {double}</div>
+            <div className="">Doubled numbers list </div>
             <ul style={{ background: theme.color }}>
               {getDoubledArray().map((val) => (
                 <li>{val}</li>
@@ -62,10 +62,5 @@ function UseCallbackDemo(props) {
     </div>
   );
 }
-
-const calculateExpensiveResults = (number) => {
-  for (let i = 0; i <= 1000000000; i++) {}
-  return number * number;
-};
 
 export default UseCallbackDemo;

@@ -14,6 +14,7 @@ export function UseRefDemo() {
   });
   return (
     <div className="container">
+      <p>UseRefDemo Hook</p>
       <h1>Colors and values are applied using reference</h1>
       <input type="text" name="" id="" ref={nameRef} />
       <input type="number" ref={ageRef} value="100" />

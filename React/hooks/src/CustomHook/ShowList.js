@@ -1,16 +1,17 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useData } from "./CommonDetails";
 
 export function ShowList(props) {
   const [data, setData] = useData(true);
-
-  //   console.log(data);
   return data ? (
-    <ul>
-      <li key={data.id}>
-        {data.status ? "Online" : "Offline"} - {data.name}
-      </li>
-    </ul>
+    <React.Fragment>
+      <p>Custom hooks in React</p>
+      <ul>
+        <li key={data.id}>
+          {data.status ? "Online" : "Offline"} - {data.name}
+        </li>
+      </ul>
+    </React.Fragment>
   ) : (
     <div>No data found</div>
   );

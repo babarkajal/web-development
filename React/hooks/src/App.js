@@ -69,7 +69,7 @@ function App() {
         {tabName === 2 && (
           <div className="section">
             <hr />
-            <p>Custom hooks in React</p>
+
             <ShowList />
           </div>
         )}
@@ -88,7 +88,6 @@ function App() {
         {tabName === 4 && (
           <div className="section">
             <hr />
-            <p>useReducer Hook</p>
             <UserReducerDemo />
           </div>
         )}
@@ -97,7 +96,6 @@ function App() {
         {tabName === 5 && (
           <div className="section">
             <hr />
-            <p>UseRefDemo Hook</p>
             <UseRefDemo />
           </div>
         )}
@@ -105,7 +103,6 @@ function App() {
         {/* UseMemo hook */}
         {tabName === 6 && (
           <div className="section">
-            <p>UseMemo Hook</p>
             <UseMemoDemo />
           </div>
         )}

@@ -18,6 +18,7 @@ export function UserReducerDemo() {
 
   return (
     <div className="container">
+      <p>useReducer Hook</p>
       <div className="container">
         Mode of operation is: {modeOfMotor.mode} and operating number{" "}
         {modeOfMotor.count}

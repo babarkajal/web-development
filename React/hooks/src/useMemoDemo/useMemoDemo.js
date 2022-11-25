@@ -15,7 +15,7 @@ function UseMemoDemo(props) {
   //   const double = calculateExpensiveResults(number);
 
   const theme = useMemo(() => {
-    return buttonColor === 0 ? { color: "#000" } : { color: "#0f0" };
+    return buttonColor === 0 ? { color: "#000" } : { color: "#0fff" };
   }, [buttonColor]);
   useEffect(() => {
     console.log("RUNS WHEN THEME CHANG");
