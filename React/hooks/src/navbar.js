@@ -67,6 +67,14 @@ function Navbar(props) {
               UseMemo
             </span>
           </li>
+          <li class="nav-item">
+            <span
+              class="navbar-brand mb-0 h1"
+              onClick={() => props.setTabName(7)}
+            >
+              UseCallback
+            </span>
+          </li>
         </ul>
       </div>
     </nav>

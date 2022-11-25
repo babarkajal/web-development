@@ -6,6 +6,7 @@ function Timer() {
   const [min, setMin] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
   const [timerStatus, setTimerStatus] = useState(true);
+
   //IT USES CALLBACK BECAUSE IT HAS DEPENDENCY ON STATE VARIABLES
   const incrementTimer = useCallback(() => {
     setSec(sec + 1);

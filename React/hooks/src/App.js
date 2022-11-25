@@ -10,6 +10,7 @@ import { UserReducerDemo } from "./UserReducerDemo/UseReducerDemo";
 import { UseRefDemo } from "./UseRefDemo/UseRefDemo";
 import Navbar from "./navbar";
 import UseMemoDemo from "./useMemoDemo/useMemoDemo";
+import UseCallbackDemo from "./useCallback/useCallbackDemo";
 function App() {
   /**
    * *Use state is one hook which returns array which contain
@@ -104,9 +105,16 @@ function App() {
         {/* UseMemo hook */}
         {tabName === 6 && (
           <div className="section">
-            <hr />
             <p>UseMemo Hook</p>
             <UseMemoDemo />
+          </div>
+        )}
+
+        {/* UseMemo hook */}
+        {tabName === 7 && (
+          <div className="section">
+            <hr />
+            <UseCallbackDemo />
           </div>
         )}
       </header>
