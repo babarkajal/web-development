@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  font-family: "Inter", sans-serif;
+}
+.Heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+// SIGNUP FORM
+.signup {
+  width: 100%;
+  margin-top: 50px;
+  &-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .form {
+      //   width: 100%;
+      //   display: flex;
+      //   flex-wrap: wrap;
+      //   justify-content: space-evenly;
+    }
+    &-field {
+      margin-bottom: 20px;
+      width: 50%;
+      input {
+        width: 100%;
+      }
+    }
+    input[type="submit"] {
+      background-color: #ff6060;
+      padding: 8px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 1rem;
+    }
+  }
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-family: inherit;
+  border-bottom: 1px solid black;
+}
+
+// FOLLOW FORM
+.users {
+  margin-top: 50px;
+  border-top: 1px solid black;
+  padding-top: 10px;
+  &-container {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &-followers {
+      background-color: #d9d9d9;
+      padding: 20px;
+      width: 100%;
+      margin: auto;
+      margin-bottom: 20px;
+
+      &-select {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+      }
+      &-heading {
+        font-size: 1.1rem;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .field {
+        width: 30%;
+      }
+
+      .follow-now {
+        display: flex;
+        justify-content: center;
+      }
+      button {
+        background-color: #ff6060;
+        padding: 8px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+//followers
+.followers {
+  margin-top: 50px;
+  border-top: 1px solid black;
+  padding-top: 10px;
+
+  margin: auto;
+  &-users {
+    width: 90vw;
+    margin: auto;
+    padding: 20px;
+    background-color: #d9d9d9;
+    padding-bottom: 30px;
+    height: 90vh;
+    overflow: auto;
+  }
+  &-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+  }
+
+  .arrows {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    img {
+      display: block;
+      height: 30px;
+    }
+  }
+}
+
+.user-card {
+  width: 40%;
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 2px;
+  .info {
+    font-size: 1rem;
+    font-weight: 400;
+    width: 80%;
+    div {
+      margin-bottom: 5px;
+    }
+    .name,
+    .email {
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-wrap: nowrap;
+    }
+  }
+  .round {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: #cdc9c9;
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+  }
+}
+
+img {
+  font-size: 0.8rem;
+}
+
+.alert {
+  position: absolute;
+  width: max-content;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  bottom: 10px;
+  left: 40%;
+  text-align: center;
+  box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .close {
+    font-weight: 600;
+    font-size: 0.8rem;
+    background: #cdc9c9;
+    padding: 3px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+}
+
+.SUCCESS {
+  background-color: #5eb85e;
+}
+
+.ERROR {
+  background-color: #ffa8a8;
+}
