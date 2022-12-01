@@ -28,20 +28,31 @@
     align-items: center;
     justify-content: center;
 
-    .form {
-      //   width: 100%;
-      //   display: flex;
-      //   flex-wrap: wrap;
-      //   justify-content: space-evenly;
+    form {
+      width: 100%;
+    }
+    .input-wrappers {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
     }
     &-field {
       margin-bottom: 20px;
-      width: 50%;
+      width: 30%;
       input {
         width: 100%;
       }
+      .error {
+        font-size: 0.8rem;
+        color: red;
+        margin-top: 4px;
+      }
     }
-    input[type="submit"] {
+    .submit {
+      text-align: center;
+    }
+    button {
       background-color: #ff6060;
       padding: 8px 20px;
       border-radius: 10px;
@@ -54,14 +65,13 @@
   }
 }
 
-input[type="text"],
-input[type="email"] {
+input {
   width: 100%;
   border: none;
   outline: none;
   padding: 10px;
   font-family: inherit;
-  border-bottom: 1px solid black;
+  border: 0.5px solid rgb(95, 95, 95);
 }
 
 // FOLLOW FORM
@@ -132,7 +142,7 @@ input[type="email"] {
     padding: 20px;
     background-color: #d9d9d9;
     padding-bottom: 30px;
-    height: 90vh;
+    max-height: 90vh;
     overflow: auto;
   }
   &-row {

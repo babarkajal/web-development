@@ -92,13 +92,18 @@ class Followers extends Component {
   };
 
   render() {
+    const list = this.getData();
     return (
       <div className="followers">
         <div className="followers-heading Heading">
           User and their followers
         </div>
         <div className="followers-users">
-          {this.getData().map((val) => val)}
+          {list && list.length ? (
+            list.map((val) => val)
+          ) : (
+            <div>No one is following each other</div>
+          )}
         </div>
       </div>
     );
