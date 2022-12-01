@@ -13,3 +13,4 @@
 3. Validation using Formik and yup
 4. Follow API added
 5. Get Users list API
+6. Loader for API request added
