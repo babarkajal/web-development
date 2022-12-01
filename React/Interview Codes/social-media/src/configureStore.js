@@ -2,7 +2,7 @@ import { createStore, applyMiddleware } from "redux";
 import ReduxThunk from "redux-thunk";
 import Reducers from "./Reducers";
 
-//PERSIST THE STORE
+//PERSIST THE STORE IN LOCAL STORAGE
 const persistStateToLocalStorage = function (prevState) {
   try {
     const serializedState = JSON.stringify(prevState);
@@ -12,7 +12,7 @@ const persistStateToLocalStorage = function (prevState) {
   }
 };
 
-//FETCH THE STORE
+//FETCH THE STORE FROM LOCAL STORAGE
 const fetchPersistedStateFromLocalStorage = function () {
   try {
     const serializedState = localStorage.getItem("socialMedia");
@@ -27,6 +27,7 @@ const fetchPersistedStateFromLocalStorage = function () {
 
 const persistedState = fetchPersistedStateFromLocalStorage();
 
+//create data store using reducers, persistState and middleware
 const dataStore = createStore(
   Reducers,
   persistedState,

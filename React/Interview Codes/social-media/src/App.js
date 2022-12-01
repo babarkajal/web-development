@@ -4,7 +4,7 @@ import { GetListOfUsers } from "./Actions/UsersActions";
 import Alert from "./Components/Alert";
 import CreateUser from "./Components/CreateUser/CreateUser";
 import Followers from "./Components/Users/Followers";
-import UsersList from "./Components/Users/UsersList";
+import FollowUser from "./Components/Users/FollowUser";
 // import Users from "./components/Users/Users";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <Alert />
       <CreateUser />
-      <UsersList />
+      <FollowUser />
       <Followers />
     </div>
   );

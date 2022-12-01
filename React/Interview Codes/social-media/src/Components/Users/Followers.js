@@ -8,6 +8,12 @@ class Followers extends Component {
     usersList: [],
   };
 
+  //fetch list on component mount
+  componentDidMount() {
+    this.formateUsers();
+  }
+
+  //If new follower-following user added then fetch the list again
   componentDidUpdate() {
     if (this.props.getUsersListStatus === 200) {
       this.formateUsers();
@@ -15,7 +21,8 @@ class Followers extends Component {
     }
   }
 
-  getList = (data, type) => {
+  //Function to return data
+  formatData = (data, type) => {
     return data.map((val) => {
       return {
         ...val.attributes,
@@ -25,74 +32,105 @@ class Followers extends Component {
     });
   };
 
+  //Format users list and convert it into render-able format
   formateUsers = () => {
     const { usersList } = this.props;
+    if (usersList && usersList.length) {
+      let userList = [];
+      usersList?.forEach((element) => {
+        //users data
+        let user = {
+          ...element.attributes,
+          id: element.id,
+          profile: element.attributes?.profile?.data?.attributes?.url,
+        };
 
-    let userList = [];
-    usersList.forEach((element) => {
-      let user = {
-        ...element.attributes,
-        id: element.id,
-        profile: element.attributes?.profile?.data?.attributes?.url,
-      };
-      let userFollowers = this.getList(element.attributes.followers.data, 1);
-      let userFollowings = this.getList(element.attributes.following.data, 2);
+        /** Followers and followings list
+         * type 1: follower
+         * type 2: following
+         * type 2: both
+         */
+        let userFollowers = this.formatData(
+          element.attributes.followers.data,
+          1
+        );
+        let userFollowings = this.formatData(
+          element.attributes.following.data,
+          2
+        );
 
-      for (let i = 0; i < userFollowings.length; i++) {
-        const following = userFollowings[i];
-        if (userFollowers.find((val) => val.email === following.email)) {
-          userFollowers.forEach((element) => {
-            if (element.email === following.email) element.type = 3;
-          });
-        } else userFollowers.push(following);
-      }
+        /**
+         ** Add users from following to followers
+         * If user is both in userFollowers and userFollowing, type = 3 means show double headed arrow
+         * If user is of type 1 then he is a follower,  user <- follower
+         * If user is of type 2 then he is a following,  user -> following
+         */
+        for (let i = 0; i < userFollowings.length; i++) {
+          const following = userFollowings[i];
+          if (userFollowers.find((val) => val.email === following.email)) {
+            userFollowers.forEach((element) => {
+              if (element.email === following.email) element.type = 3;
+            });
+          } else userFollowers.push(following);
+        }
+        user = {
+          ...user,
+          userConnections: userFollowers,
+        };
+        userList.push(user);
+      });
 
-      user = {
-        ...user,
-        userConnections: userFollowers,
-      };
-      userList.push(user);
-    });
-
-    this.setState({
-      usersList: userList,
-    });
+      //  UPDATE THE LOCAL LIST
+      this.setState({
+        usersList: userList,
+      });
+    }
   };
 
-  getData = () => {
+  //RETURN JSX ARRAY
+  getUserJSX = () => {
     const { usersList } = this.state;
     let JSXarray = [];
     usersList?.forEach((user) => {
-      user.userConnections.forEach((connection) => {
-        JSXarray.push(
-          <div
-            className="followers-row"
-            key={connection.email + connection.id + user.id}
-          >
-            <UserCard data={user} />
-            <div className="arrows">
-              {connection.type === 1 ? (
-                <img src="./assets/leftArrow.svg" alt="" />
-              ) : connection.type === 2 ? (
-                <img src="./assets/rightArrow.svg" alt="" />
-              ) : connection.type === 3 ? (
-                <>
+      if (user.userConnections && user.userConnections.length) {
+        user.userConnections.forEach((connection) => {
+          JSXarray.push(
+            <div
+              className="followers-row"
+              key={connection.email + connection.id + user.id}
+            >
+              <UserCard data={user} />
+              <div className="arrows">
+                {connection.type === 1 ? (
                   <img src="./assets/leftArrow.svg" alt="" />
+                ) : connection.type === 2 ? (
                   <img src="./assets/rightArrow.svg" alt="" />
-                </>
-              ) : null}
+                ) : connection.type === 3 ? (
+                  <>
+                    <img src="./assets/leftArrow.svg" alt="" />
+                    <img src="./assets/rightArrow.svg" alt="" />
+                  </>
+                ) : null}
+              </div>
+              <UserCard data={connection} />
             </div>
-            <UserCard data={connection} />
+          );
+        });
+      }
+      //IF THERE IS NO FOLLOWER THEN SHOW MAIN USER INFO
+      else {
+        JSXarray.push(
+          <div className="followers-row" key={user.id}>
+            <UserCard data={user} />
           </div>
         );
-      });
+      }
     });
-    // console.log(JSXarray);
     return JSXarray;
   };
 
   render() {
-    const list = this.getData();
+    const list = this.getUserJSX();
     return (
       <div className="followers">
         <div className="followers-heading Heading">

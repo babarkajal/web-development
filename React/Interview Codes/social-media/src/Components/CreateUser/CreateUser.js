@@ -1,6 +1,14 @@
+/**
+ ** Create User: Functional component to create a new user
+ * Validation using Formik and yup
+ */
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { CreateUserAction, ShowAlert } from "../../Actions/UsersActions";
+import {
+  CreateUserAction,
+  GetListOfUsers,
+  ShowAlert,
+} from "../../Actions/UsersActions";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
@@ -18,25 +26,27 @@ const SignupSchema = Yup.object().shape({
 
 function CreateUser(props) {
   const dispatch = useDispatch();
-  const [firstName, setFirstName] = useState("");
-  const [email, setEmail] = useState("");
-  const [lastName, setLastName] = useState("");
-
+  const [processing, setProcess] = useState(false);
+  //ON SUBMIT CALL API
   const createUser = async (values) => {
     const reqBody = {
       data: values,
     };
+    setProcess(true);
     const response = await CreateUserAction(reqBody);
     if (response.status === 200) {
       dispatch(
         ShowAlert({ type: "SUCCESS", message: "User Created Successfully" })
       );
-      setLastName("");
-      setFirstName("");
-      setEmail("");
+
+      //GET USERS LIST
+      dispatch(GetListOfUsers());
+      setProcess(false);
     } else {
-      //   console.log(response);
-      dispatch(ShowAlert({ type: "ERROR", message: response?.message }));
+      dispatch(
+        ShowAlert({ type: "ERROR", message: "Email ID must be unique" })
+      );
+      setProcess(false);
     }
   };
 
@@ -46,11 +56,13 @@ function CreateUser(props) {
         <div className="signup-container-heading Heading">
           Create an account
         </div>
+
+        {/* FORM  */}
         <Formik
           initialValues={{
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
+            firstName: "",
+            lastName: "",
+            email: "",
           }}
           validationSchema={SignupSchema}
           onSubmit={(values, { resetForm }) => {
@@ -81,7 +93,11 @@ function CreateUser(props) {
                 </div>
               </div>
               <div className="submit">
-                <button type="submit">Submit</button>
+                {processing ? (
+                  <img src="./assets/loader.svg" alt="" />
+                ) : (
+                  <button type="submit">Submit</button>
+                )}
               </div>
             </Form>
           )}
@@ -92,30 +108,3 @@ function CreateUser(props) {
 }
 
 export default CreateUser;
-//   <div className="signup-container-field">
-//     <input
-//       type="text"
-//       placeholder="First Name"
-//       value={firstName}
-//       onChange={(e) => handleInput(e, setFirstName)}
-//     />
-//   </div>
-//   <div className="signup-container-field">
-//     <input
-//       type="text"
-//       placeholder="Last Name"
-//       onChange={(e) => handleInput(e, setLastName)}
-//       value={lastName}
-//     />
-//   </div>
-//   <div className="signup-container-field">
-//     <input
-//       type="email"
-//       placeholder="Email"
-//       onChange={(e) => handleInput(e, setEmail)}
-//       value={email}
-//     />
-//   </div>
-//     <div className="submit">
-//     <input type="submit" value="Submit" onClick={createUser} />
-//   </div>

@@ -1,3 +1,6 @@
+/**
+ * Component for users info
+ */
 import React from "react";
 
 function UserCard({ data }) {
