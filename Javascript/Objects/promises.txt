@@ -1,0 +1,21 @@
+
+getUsers() {
+  new Promise();
+}
+
+getUsers().then(users=>{
+  getPosts(userId).then(posts=>{
+    getComments(postId).then(comments=>{
+        getAllLikes(commentId).then(likes=>{
+          console.log(likes);
+        });
+    })
+  })
+}).catch(e);
+
+
+
+getUsers();
+getPosts();
+getComments();
+getAllLikes();

@@ -14,9 +14,11 @@ function UseMemoDemo(props) {
   //**WITHOUT MEMO : This function will run every time when the component re-renders */
   //   const double = calculateExpensiveResults(number);
 
+  //IF DEPENDENCY IS NOT GIVEN GET CALLED ONLY AT MOUNTING TIME
   const theme = useMemo(() => {
     return buttonColor === 0 ? { color: "#000" } : { color: "#0fff" };
   }, [buttonColor]);
+  
   useEffect(() => {
     console.log("RUNS WHEN THEME CHANG");
   }, [theme]);
