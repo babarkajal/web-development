@@ -1,0 +1,40 @@
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #419dbb;
+  .get-joke {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  button {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #419dbb;
+    border: none;
+    outline: none;
+    color: white;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-weight: 600;
+}
